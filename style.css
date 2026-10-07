@@ -1,0 +1,373 @@
+
+
+:root {
+    --bg: #0f1a2b;
+    --surface: #172640;
+    --ink: #eaf0f8;
+    --muted: #a3b2c9;
+    --accent: #6bb8e6;
+    --pop: #f2b633;
+    --line: #2a3c5c;
+
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+
+html {
+  scroll-padding-top: env(safe-area-inset-top, 0px);
+  scroll-behavior: smooth;   
+}
+
+
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Sarabun', system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-family: 'Kanit', system-ui, sans-serif;
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+}
+
+/* กรอบโฟกัสเวลากด Tab (ช่วยคนใช้คีย์บอร์ด) */
+:focus-visible {
+  outline: 3px solid var(--pop);
+  outline-offset: 3px;
+}
+
+
+/* ---------- 3. โครงหน้า (Layout) ---------- */
+/* กล่องจำกัดความกว้างเนื้อหา และจัดให้อยู่กลางหน้า */
+.wrap {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+
+/* ---------- 4. ส่วนหัวและเมนู (Header) ---------- */
+header.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+header.top b {
+  font-family: 'Kanit', sans-serif;
+}
+
+nav a {
+  margin-left: 1.1rem;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+
+.head {
+  display: grid;
+  grid-template-columns: 1fr 15rem;  
+  gap: 2.5rem;
+  align-items: center;
+  padding: 3rem 0 4rem;
+}
+
+.head h1 {
+  font-size: clamp(2.6rem, 8vw, 4.8rem);   
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* นามสกุลขึ้นบรรทัดใหม่ สีน้ำเงิน */
+.head h1 span {
+  display: block;
+  color: var(--accent);
+}
+
+.head p {
+  max-width: 34rem;
+  margin: 1.2rem 0 1.6rem;
+  color: var(--muted);
+}
+
+/* รูปโปรไฟล์ทรงก้อนกลมมน คลิกเพื่อเลือกรูปได้ */
+.avatar {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 46% 54% 50% 50% / 55% 45% 55% 45%;
+  background: var(--pop) center / cover no-repeat;
+  font-size: 4rem;
+  cursor: pointer;
+}
+
+/* ช่องเลือกไฟล์: ซ่อนไว้ แต่คลุมทั้งกรอบเพื่อให้คลิกได้ */
+.avatar input,
+.photo input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.avatar:focus-within,
+.photo:focus-within {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+}
+
+
+/* ---------- 6. ปุ่ม (Buttons) ---------- */
+.btn1 {
+  display: inline-block;
+  margin: 0 0.5rem 0.5rem 0;
+  padding: 0.6rem 1.3rem;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--bg);
+  font-weight: 600;
+  text-decoration: none;
+}
+.btn2 {
+  display: inline-block;
+  margin: 0 0.5rem 0.5rem 0;
+  padding: 0.6rem 1.3rem;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--bg);
+  font-weight: 600;
+  text-decoration: none;
+}
+.btn3 {
+  display: inline-block;
+  margin: 0 0.5rem 0.5rem 0;
+  padding: 0.6rem 1.3rem;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--bg);
+  font-weight: 600;
+  text-decoration: none;
+}
+.btn4 {
+  display: inline-block;
+  margin: 0 0.5rem 0.5rem 0;
+  padding: 0.6rem 1.3rem;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--bg);
+  font-weight: 600;
+  text-decoration: none;
+}
+.btn5 {
+  display: inline-block;
+  margin: 0 0.5rem 0.5rem 0;
+  padding: 0.6rem 1.3rem;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--bg);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* ---------- 7. หัวข้อแต่ละส่วน (Sections) ---------- */
+section {
+  padding: 3rem 0;
+  border-top: 1px solid var(--line);
+}
+
+section > .wrap > h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.9rem;
+}
+
+
+/* ---------- 8. งานอดิเรก (Cards) ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  padding: 1.2rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+}
+
+.card .ic {
+  font-size: 2rem;   /* ไอคอน emoji */
+}
+
+.card h3 {
+  margin: 0.4rem 0 0.2rem;
+  font-size: 1.15rem;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+
+/* ---------- 9. ทักษะ (Skills) ---------- */
+/* แบ่ง 2 คอลัมน์ ถ้าจอแคบจะเรียงต่อกัน */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 0 3rem;
+}
+
+.skill {
+  margin-bottom: 1.1rem;
+}
+
+/* ชื่อทักษะ (ซ้าย) และเปอร์เซ็นต์ (ขวา) */
+.skill div {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+/* หลอดพื้นหลัง */
+.bar {
+  height: 0.7rem;
+  margin-top: 0.3rem;
+  overflow: hidden;
+  border-radius: 99px;
+  background: var(--line);
+}
+
+/* ส่วนที่เติมสี (ความกว้างกำหนดใน HTML ด้วย style="width:85%") */
+.bar i {
+  display: block;
+  height: 100%;
+  border-radius: 99px;
+  background: var(--accent);
+}
+
+
+/* ---------- 10. ความสนใจ (Chips) ---------- */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chips li {
+  padding: 0.45rem 1rem;
+  border: 2px solid var(--accent);
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+
+
+/* ---------- 11. รูปกิจกรรม (Gallery) ---------- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1rem;
+}
+
+#my_pic {
+    width: 95%;
+    border-radius: 10%;
+}
+
+figure {
+  margin: 0;
+}
+
+/* กรอบรูป (ยังไม่มีรูปจะแสดงพื้นไล่สี + emoji) */
+.photo {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, var(--accent), var(--pop)) center / cover no-repeat;
+  color: #fff;
+  font-size: 2.6rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.photo small {
+  display: block;
+  font-family: 'Sarabun', sans-serif;
+  font-size: 0.85rem;
+}
+
+/* เมื่อเลือกรูปแล้ว ซ่อน emoji และข้อความ */
+.has-img > span {
+  display: none;
+}
+
+figcaption {
+  padding: 0.5rem 0.2rem 0;
+  font-weight: 600;
+}
+
+
+/* ---------- 12. ลิงก์โซเชียล (Links) ---------- */
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+
+/* ---------- 13. ท้ายหน้า (Footer) ---------- */
+footer {
+  padding: 2rem 0 3rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  text-align: center;
+}
+
+
+/* ---------- 14. มือถือ (Responsive) ---------- */
+@media (max-width: 640px) {
+  /* head เรียงเป็นแนวตั้ง โดยรูปโปรไฟล์ขึ้นก่อน */
+  .head {
+    grid-template-columns: 1fr;
+    padding-top: 1.5rem;
+  }
+
+  .avatar {
+    order: -1;
+    width: 11rem;
+  }
+
+  nav a {
+    margin: 0 0.9rem 0 0;
+  }
+}

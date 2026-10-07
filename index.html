@@ -1,27 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>JavaScript 2: Arrays, Objects, Form Events & localStorage</title>
-	<link rel="stylesheet" type="text/css" href="main.css">
-	<script src="main.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Portfolio ศุภจิตร์ ภักดีวงษ์</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500;700&family=Sarabun:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<h1>JavaScript 2: Arrays, Objects, Form Events &amp; localStorage</h1>
-	<p><em>(ตรวจสอบผลลัพธ์ของ Array, Object, Array of Objects และ localStorage ได้ที่ Browser Console - กด F12)</em></p>
-	<hr>
+<div class="wrap">
+  <header class="top">
+    <h2>Media Technology KMUTT</h2>
+    <nav aria-label="เมนู">
+      
+      <a href="#skill">ประวัติการศึกษา</a>
+      <a href="#interest">ความสนใจ</a>
+      <a href="#hobby">งานอดิเรก</a>
+      <a href="#contact">ติดต่อ</a></nav>
+  </header>
 
-	<form action="index.html" id="myForm" name="myForm">
-		<fieldset>
-			<legend><strong>Profile Form (Form Event Demo)</strong></legend>
-			First name:<br>
-			<input type="text" name="firstname" required><br>
-			Last name:<br>
-			<input type="text" name="lastname"><br>
-			<input type="submit" id="submitBtn" value="Submit Form">
-		</fieldset>
-	</form>
+  <main>
+  <div class="head">
+    <div>
+      <h1>PORTFOLIO  <span>ศุภจิตร์ ภักดีวงษ์</span></h1>
+      <p>ประวัติ ผลงานและความสามารถและความสนใจของผม</p>
+      <a class="btn1"> Cinnamon Roll Wreath with Apples</a>
+      <a class="btn2" >Pizza dip</a>
+      <a class="btn3" >Blog</a>
+      <a class="btn4" >Register and login</a>
+      <a class="btn5" >Square game</a>
+    </div>
+    <label><img id="my_pic" src="pic/mypic.png" alt="my_pic" /></label>  
+  </div>
+  </main>
+</div>
+
+
+<section id="skill"><div class="wrap">
+  <h1>ประวัติการศึกษา </h1><br>
+  <div class="skills">
+    <div>
+    <article> <li><h2>การศึกษาระดับมัธยมปลาย</h2> </li>
+        <p>โรงเรียนราชประชาสมาสัย ฝ่ายมัธยม รัชดาภิเษก ในพระบรมราชูปถัมภ์ </p>
+        <p>สายวิทย์-คณิต</p>
+        <table>
+        <tr>
+            <th></th>
+            <th>หน่วยกิต</th>
+            <th>เกรดเฉลี่ย</th>
+        </tr>
+        <tr>
+            <td>ม.4 |</td>
+            <td>34</td>
+            <td>3.4</td>
+        </tr>
+        <tr>
+            <td>ม.5 |</td>
+            <td>36</td>
+            <td>3.6</td>
+        </tr>
+        <tr>
+            <td>ม.6 |</td>
+            <td>32</td>
+            <td>3.8</td>
+        </tr>
+    </table>
+    </div>
+        <li><h2>การศึกษาระดับมหาลัย</h2>
+        <p>มหาลัย: มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</p>
+        <p>คณะที่ศึกษา: คณะสถาปัตยกรรมศาสตร์และการออกแบบ</p>
+        <p>สาขาวิชา: โครงการร่วมบริหารหลักสูตรมีเดียอาตส์และเทคโนโลยีมีเดีย</p>
+        <p>เกรดเฉลี่ย: 2.89</p>
+
+        </ul>
+    </article>
+  </div>
+</div></section>
+
+
+
+<section id="interest"><div class="wrap">
+  <h2>ความสนใจ</h2>
+  <ul class="chips">
+    <li>3d printing</li><li>3d designing</li><li>electronic repairing</li><li>diy</li><li>game designing</li><li>cad designing</li>
+  </ul>
+</div></section>
+
+<section id="hobby"><div class="wrap">
+  <h2>งานอดิเรก</h2>
+  <div class="grid">
+    <div class="card"><div class="ic"><img id="my_pic" src="pic/printer.jpg" alt="my_printer" ></div><h3>3d printing</h3><p>เครื่อง 3d printer ที่แปลงจากเครื่องender3 เป็นเครื่องจากโปรเจคender3ng และมีการแต่งเติมเป็นการส่วนตัว</p></div>
+    <div class="card"><div class="ic"><img id="my_pic" src="pic/roblox.jpg" alt="my_roblox" ></div><h3>ความสนใจในการปั้น asset game</h3><p>เป็นเกมในแพลตฟอร์มในrobloxที่มีชื่อว่าflight point เป็นเกมsandboxที่เล่นกับเพื่อนได้จึงได้ฝึกแกะแบบปั้นโมเดลต่างๆในเกมนี้   และตอนนี้ได้ฝึกใช้ blender ควบกับ3d printingทำของต่างๆในบ้าน</p></div>
+    <div class="card"><div class="ic"><img id="my_pic" src="pic/game.jpg" alt="my_game" ></div><h3>gameที่เล่น </h3><p>Warthunder   Mecha break   minecraft    roblox    overwatch    terraria    core keeper</p></div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <h2>contact ติดต่อ</h2>
+  <div class="links">
+    <a class="btn" href="https://www.facebook.com/suphcitrphakdiwngs" target="_blank" rel="noopener">Facebook</a>
+    <a class="btn" href="https://www.instagram.com/supajit_phakdeewong/" target="_blank" rel="noopener">Instagram</a>
+    <a class="btn alt" href="mailto:goodcat25417@gmail.com">อีเมล</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">portfolio ศุภจิตร์ ภักดีวงษ์</div></footer>
+
+<script src="script.js"></script>
 </body>
 </html>
