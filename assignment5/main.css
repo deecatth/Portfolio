@@ -1,0 +1,42 @@
+/* img{
+    width: 30%;
+} */
+
+div {
+    max-width: 1000px;
+    width: 70%;
+    text-align: center;
+}
+/* body{
+    padding: 30px 15px;
+    
+    width: 70%;
+    border: 2px solid rgb(6, 58, 23);
+    text-align: center;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 14% auto 22%;
+    gap: 18px;
+    max-width: 1500px;
+    margin: 0 auto;
+} */
+
+/* #main1{
+        width: 70%;
+        max-width: 1500px;
+		grid-column: 2 / span 2;
+		text-align: center;
+	} */
+p{
+    
+    margin: auto;
+    width: 30%;
+    height: 100px;
+}
+@media only screen and (max-width: 767px){
+    .class1{
+        border: 2px solid blue;
+        text-align: center;
+    }
+}
