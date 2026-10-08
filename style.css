@@ -41,6 +41,7 @@ a {
   color: inherit;
 }
 
+
 /* กรอบโฟกัสเวลากด Tab (ช่วยคนใช้คีย์บอร์ด) */
 :focus-visible {
   outline: 3px solid var(--pop);
