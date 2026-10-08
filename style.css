@@ -204,7 +204,6 @@ section > .wrap > h2 {
 }
 
 
-/* ---------- 8. งานอดิเรก (Cards) ---------- */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
@@ -218,9 +217,6 @@ section > .wrap > h2 {
   border-radius: 1rem;
 }
 
-.card .ic {
-  font-size: 2rem;   /* ไอคอน emoji */
-}
 
 .card h3 {
   margin: 0.4rem 0 0.2rem;
@@ -234,8 +230,6 @@ section > .wrap > h2 {
 }
 
 
-/* ---------- 9. ทักษะ (Skills) ---------- */
-/* แบ่ง 2 คอลัมน์ ถ้าจอแคบจะเรียงต่อกัน */
 .skills {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
@@ -246,14 +240,13 @@ section > .wrap > h2 {
   margin-bottom: 1.1rem;
 }
 
-/* ชื่อทักษะ (ซ้าย) และเปอร์เซ็นต์ (ขวา) */
 .skill div {
   display: flex;
   justify-content: space-between;
   font-weight: 600;
 }
 
-/* หลอดพื้นหลัง */
+
 .bar {
   height: 0.7rem;
   margin-top: 0.3rem;
@@ -262,7 +255,6 @@ section > .wrap > h2 {
   background: var(--line);
 }
 
-/* ส่วนที่เติมสี (ความกว้างกำหนดใน HTML ด้วย style="width:85%") */
 .bar i {
   display: block;
   height: 100%;
@@ -270,8 +262,6 @@ section > .wrap > h2 {
   background: var(--accent);
 }
 
-
-/* ---------- 10. ความสนใจ (Chips) ---------- */
 .chips {
   display: flex;
   flex-wrap: wrap;
@@ -290,7 +280,6 @@ section > .wrap > h2 {
 
 
 
-/* ---------- 11. รูปกิจกรรม (Gallery) ---------- */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
@@ -306,31 +295,7 @@ figure {
   margin: 0;
 }
 
-/* กรอบรูป (ยังไม่มีรูปจะแสดงพื้นไล่สี + emoji) */
-.photo {
-  position: relative;
-  display: grid;
-  place-items: center;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-  border-radius: 1rem;
-  background: linear-gradient(135deg, var(--accent), var(--pop)) center / cover no-repeat;
-  color: #fff;
-  font-size: 2.6rem;
-  text-align: center;
-  cursor: pointer;
-}
 
-.photo small {
-  display: block;
-  font-family: 'Sarabun', sans-serif;
-  font-size: 0.85rem;
-}
-
-/* เมื่อเลือกรูปแล้ว ซ่อน emoji และข้อความ */
-.has-img > span {
-  display: none;
-}
 
 figcaption {
   padding: 0.5rem 0.2rem 0;
@@ -338,7 +303,6 @@ figcaption {
 }
 
 
-/* ---------- 12. ลิงก์โซเชียล (Links) ---------- */
 .links {
   display: flex;
   flex-wrap: wrap;
@@ -346,7 +310,6 @@ figcaption {
 }
 
 
-/* ---------- 13. ท้ายหน้า (Footer) ---------- */
 footer {
   padding: 2rem 0 3rem;
   border-top: 1px solid var(--line);
@@ -355,9 +318,7 @@ footer {
 }
 
 
-/* ---------- 14. มือถือ (Responsive) ---------- */
 @media (max-width: 640px) {
-  /* head เรียงเป็นแนวตั้ง โดยรูปโปรไฟล์ขึ้นก่อน */
   .head {
     grid-template-columns: 1fr;
     padding-top: 1.5rem;
