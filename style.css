@@ -42,15 +42,14 @@ a {
 }
 
 
-/* กรอบโฟกัสเวลากด Tab (ช่วยคนใช้คีย์บอร์ด) */
+
 :focus-visible {
   outline: 3px solid var(--pop);
   outline-offset: 3px;
 }
 
 
-/* ---------- 3. โครงหน้า (Layout) ---------- */
-/* กล่องจำกัดความกว้างเนื้อหา และจัดให้อยู่กลางหน้า */
+
 .wrap {
   max-width: 60rem;
   margin: 0 auto;
@@ -58,7 +57,7 @@ a {
 }
 
 
-/* ---------- 4. ส่วนหัวและเมนู (Header) ---------- */
+
 header.top {
   display: flex;
   justify-content: space-between;
@@ -97,7 +96,7 @@ nav a:hover {
   letter-spacing: -0.01em;
 }
 
-/* นามสกุลขึ้นบรรทัดใหม่ สีน้ำเงิน */
+
 .head h1 span {
   display: block;
   color: var(--accent);
@@ -109,38 +108,8 @@ nav a:hover {
   color: var(--muted);
 }
 
-/* รูปโปรไฟล์ทรงก้อนกลมมน คลิกเพื่อเลือกรูปได้ */
-.avatar {
-  position: relative;
-  display: grid;
-  place-items: center;
-  aspect-ratio: 1;
-  overflow: hidden;
-  border-radius: 46% 54% 50% 50% / 55% 45% 55% 45%;
-  background: var(--pop) center / cover no-repeat;
-  font-size: 4rem;
-  cursor: pointer;
-}
-
-/* ช่องเลือกไฟล์: ซ่อนไว้ แต่คลุมทั้งกรอบเพื่อให้คลิกได้ */
-.avatar input,
-.photo input {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.avatar:focus-within,
-.photo:focus-within {
-  outline: 3px solid var(--ink);
-  outline-offset: 3px;
-}
 
 
-/* ---------- 6. ปุ่ม (Buttons) ---------- */
 .btn1 {
   display: inline-block;
   margin: 0 0.5rem 0.5rem 0;
@@ -192,7 +161,7 @@ nav a:hover {
   text-decoration: none;
 }
 
-/* ---------- 7. หัวข้อแต่ละส่วน (Sections) ---------- */
+
 section {
   padding: 3rem 0;
   border-top: 1px solid var(--line);
